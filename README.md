@@ -14,6 +14,7 @@
 
 ## Setting up express server
 
+## GraphiQL Tool
 
 # References:
 1. [express-graphql-Docs](https://graphql.org/graphql-js/express-graphql/)
