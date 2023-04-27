@@ -12,6 +12,8 @@
 # express-Graphql
 ##### `express-graphql` module provides a simple way to create an Express server that runs on GraphQL API. SDL has a type system that allows you to define data structures.
 
+## Setting up express server
+
 
 # References:
 1. [express-graphql-Docs](https://graphql.org/graphql-js/express-graphql/)
