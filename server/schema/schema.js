@@ -47,7 +47,7 @@ const RootQuery = new GraphQLObjectType({
         clients: {
             type: new GraphQLList(ClientType),
             resolve(parent, args) {
-                return clients
+                return clients;
             }
         },
 
@@ -55,18 +55,34 @@ const RootQuery = new GraphQLObjectType({
             type: ProjectType,
             args: { id: { type: GraphQLID } },
             resolve(parent, args) {
-                return projects.find(project => project.id === args.id)
+                return projects.find(project => project.id === args.id);
             }
         },
 
         projects: {
             type: new GraphQLList(ProjectType),
             resolve(parent, args) {
-                return projects
+                return projects;
             }
         }
     }
-})
+});
+
+// const mutation = new GraphQLObjectType({
+//     name: 'Mutation',
+//     fields: {
+//         addClient: {
+//             type: ClientType,
+//             args: {
+
+//             }
+//         },
+
+        // addProject: {
+        //     type: ProjectType
+        // }
+//     }
+// })
 
 
 export default new GraphQLSchema({
