@@ -1,7 +1,9 @@
 import { ApolloClient } from '@apollo/client';
+import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header.jsx';
-import Clients from './components/Clients.jsx';
-import AddClientModal from './components/AddClientModal.jsx';
+import Home from './pages/Home.jsx';
+import NotFound from './pages/NotFound.jsx';
+import Project from './pages/Project.jsx';
 import './App.css'
 
 function App() {
@@ -10,8 +12,11 @@ function App() {
     <>
       <Header />
       <div className="container">
-          <AddClientModal />
-          <Clients />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects/:id" element={<Project />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </div>
     </>
   )
